@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Öğrenci Bilgileri</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="main-container" style="display: none;">
+    <h1>Öğrenci Bilgileri</h1>
+
+    <input type="text" id="searchInput" placeholder="Öğrenci ara..." class="search-bar" onkeyup="searchStudent()">
+
+    <div class="student-info" id="student-details">
+      Öğrenci bilgilerini görmek için bir öğrenciye tıklayın.
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Numara</th>
+          <th>Ad Soyad</th>
+        </tr>
+      </thead>
+      <tbody id="student-list">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
