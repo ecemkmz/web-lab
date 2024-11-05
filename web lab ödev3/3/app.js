@@ -3,11 +3,11 @@ const fs = require("fs");
 fs.readFile("asal_sayi.txt", "utf8", (err, data) => {
   if (err) throw err;
 
-  const primesFromFile = data.split(",").map(Number);
+  const filePrimes = data.split(",").map(Number);
   const allNumbers = [];
 
   for (let i = 1; i < 90; i++) {
-    if (primesFromFile.includes(i)) {
+    if (filePrimes.includes(i)) {
       allNumbers.push(i + " (asal)");
     } else {
       allNumbers.push(i);

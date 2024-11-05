@@ -47,17 +47,17 @@ connection.connect((err) => {
         connection.query(insertQuery, (err, result) => {
           if (err) throw err;
           console.log("Tüm veriler başarıyla eklendi.");
-          runOtherQueries();
+          handleEmployeeOperations();
         });
       } else {
         console.log("Tablo zaten dolu, veri eklenmedi.");
-        runOtherQueries();
+        handleEmployeeOperations();
       }
     });
   });
 });
 
-function runOtherQueries() {
+function handleEmployeeOperations() {
   const selectQuery = `SELECT * FROM employees WHERE DepartmentName = 'Engineering'`;
   connection.query(selectQuery, (err, results) => {
     if (err) throw err;
